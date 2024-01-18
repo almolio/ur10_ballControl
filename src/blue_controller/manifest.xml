@@ -1,0 +1,19 @@
+<package>
+  <description brief="blue_controller">
+
+     blue_controller
+
+  </description>
+  <author>almo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/blue_controller</url>
+  <depend package="tum_ics_ur_robot_msgs"/>
+  <depend package="tum_ics_ur_robot_lli"/>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="tf"/>
+  <depend package="tf_conversions"/>
+
+</package>

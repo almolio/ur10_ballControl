@@ -1,0 +1,34 @@
+digraph G {
+"base_link" -> "dh_arm_joint_0"[label="Broadcaster: /blue_controller\nAverage rate: 520.863 Hz\nMost recent transform: 1677510718.607 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_1"[label="Broadcaster: /blue_controller\nAverage rate: 520.864 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_2"[label="Broadcaster: /blue_controller\nAverage rate: 520.867 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_3"[label="Broadcaster: /blue_controller\nAverage rate: 520.867 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_4"[label="Broadcaster: /blue_controller\nAverage rate: 520.868 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_5"[label="Broadcaster: /blue_controller\nAverage rate: 520.868 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_6"[label="Broadcaster: /blue_controller\nAverage rate: 520.869 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"dh_arm_joint_0" -> "dh_arm_joint_ef"[label="Broadcaster: /blue_controller\nAverage rate: 520.869 Hz\nMost recent transform: 1677510718.608 ( 0.001 sec old)\nBuffer length: 4.988 sec\n"];
+"camera_link" -> "camera_depth_frame"[label="Broadcaster: /camera_base_link\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /camera_base_link3\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /camera_base_link1\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"ursa_wrist_3_link" -> "ursa_ee_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"ursa_wrist_2_link" -> "ursa_wrist_3_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+"world" -> "ursa_base_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label="Broadcaster: /camera_base_link2\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1677510718.608 sec old)\nBuffer length: 0.000 sec\n"];
+"ursa_upper_arm_link" -> "ursa_forearm_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+"ursa_shoulder_link" -> "ursa_upper_arm_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+"ursa_base_link" -> "ursa_shoulder_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+"ursa_forearm_link" -> "ursa_wrist_1_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+"ursa_wrist_1_link" -> "ursa_wrist_2_link"[label="Broadcaster: /robot_state_publisher_ur10\nAverage rate: 10.204 Hz\nMost recent transform: 1677510718.540 ( 0.068 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1677510718.608"[ shape=plaintext ] ;
+ }->"base_link";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1677510718.608"[ shape=plaintext ] ;
+ }->"camera_link";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1677510718.608"[ shape=plaintext ] ;
+ }->"world";
+}

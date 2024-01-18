@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <rosparam file="$(find ballfinder)/params/redball.yaml" command="load" ns="redball"/>
+  <rosparam file="$(find ballfinder)/params/blueball.yaml" command="load" ns="blueball"/>
+
+  <!-- red ball finder -->
+  <node name="redball_finder" pkg="ballfinder" type="ballfinder_node" ns="redball" output="screen" />
+  <node name="blueball_finder" pkg="ballfinder" type="ballfinder_node" ns="blueball" output="screen" />
+
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- filter parameters --> 
+    <rosparam file="$(find state_filter)/params/redball.yaml" command="load" ns="redball" />
+    <rosparam file="$(find state_filter)/params/blueball.yaml" command="load" ns="blueball" />
+
+    <!-- the filter -->
+    <node name="redball_state_filter" pkg="state_filter" type="state_filter_node" output="screen" ns="redball" />
+    <node name="blueball_state_filter" pkg="state_filter" type="state_filter_node" output="screen" ns="blueball" />
+    
+
+</launch>

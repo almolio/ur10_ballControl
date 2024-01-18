@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- ur10 settings -->
+  <arg name="CONFIG_FILE_PATH" default="$(find blue_controller)/launch/configs/configUR10.ini"/>
+
+  <!-- ur10 model parameters --> 
+  <rosparam file="$(find ur_model)/launch/configs/ur10_model.yaml" command="load" />
+
+  <!-- the controller -->
+  <node name="blue_controller" pkg="blue_controller" type="blue_controller_node" args="$(arg CONFIG_FILE_PATH)" output="screen">
+
+  <!-- internal parameter --> 
+  <rosparam file="$(find tum_ics_ur_robot_controllers)/launch/configs/pidInt.yaml" command="load" />
+
+  <!-- controller parameter --> 
+  <rosparam file="$(find blue_controller)/launch/configs/blueCtrl.yaml" command="load" />
+    
+  </node>
+
+    <!-- the ball simulator -->
+  <!-- <node name="ball_position_sim" pkg="ball_position_sim" type="ball_position_sim.py" output="screen" respawn="true" />  -->
+
+  <!-- camera sensor primesense -->
+  <include file="$(find openni2_launch)/launch/openni2.launch" />
+  
+  <!-- camera sensor kinect -->
+  <!-- <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch" /> -->
+
+  <node pkg="arucoposition" type="arucoBroadcast.py" name="arucoBroadcast" required="true" output="log" />
+  
+  <!-- ball finder node -->
+  <include file="$(find ballfinder)/launch/ballfinder.launch" />
+
+  <!-- state filter -->
+  <include file="$(find state_filter)/launch/state_filter.launch" />
+  
+</launch>

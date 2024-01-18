@@ -1,0 +1,40 @@
+# Gains for the Proportional-Derivative Joint Space Controller
+# P and D gains for each axis.
+blue_ctrl: 
+ #proportional
+ gains_p: [20, 20, 20, 15, 10, 5]
+ gains_p_c: [9, 7, 6, 0.7, 0.7, 0.6]
+ 
+ #derivative
+ gains_d: [25, 22, 22, 7, 5, 4]
+
+ #integral 
+ gains_i: [0,0,0,0,0,0]
+
+ # Desired position in deg [J1, J2, J3, J4, J5, J6]
+ goal: [0, -85, 65, -70, 90, 0]
+
+ # Cartesian Pose for relative to initial pose
+ goal_c: [0.2, 0.2, 0, 0, 0.7096491, 0, 0.7045553] # x y z qx qy qz qw
+
+ # adaptive controller
+ learning_rate: 0.1 #0.001
+
+ # parametrization of splines in trajectory generators
+ spline_duration: 25.0 # WITH HARDWARE SET TO 25.0
+ spline_speed: 0.18 # (m/s))
+ speed_degration: 0.97
+ spline_type: 2
+ respline_thres: 0.75
+
+ # safety zone + home position
+ zone_dim: 1.2 # WITH HARDWARE SET TO 0.85
+ home: [0.0, 0.75, 0.99]
+
+ # desired orientation during ball tracking
+ roll_d: M_PI/2 
+ pitch_d: 0
+ yaw_d: M_PI/2
+ 
+# for impedance control 
+ springK: [8.142, 0.001, 0.001, 0.001, 0.001, 0.001] 
